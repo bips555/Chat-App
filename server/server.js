@@ -3,8 +3,10 @@ const app = express()
 import dotenv from 'dotenv'
 import authRouter from './routes/auth.routes.js'
 import connectToDB from './db/connectToMongoDB.js'
+import exp from 'constants'
 
 dotenv.config()
+app.use(express.json())
 const PORT = process.env.PORT || 5000
 
 app.use('/api/auth',authRouter)
