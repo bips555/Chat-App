@@ -11,3 +11,19 @@ body{
     
     
 }
+::-webkit-scrollbar-track{
+    cursor: pointer;
+   background: #555;
+}
+::-webkit-scrollbar-thumb{
+    background: #000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background: rgb(17, 17, 17);
+}
+::-webkit-scrollbar{
+    cursor: pointer;
+    width: 8px;
+}
