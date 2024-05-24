@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
     const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	
 	return (
 		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
@@ -12,7 +13,7 @@ const Login = () => {
 					<span className='text-blue-500'> ChatApp</span>
 				</h1>
 
-				<form>
+				<form >
 					<div>
 						<label className='label p-2'>
 							<span className='text-base label-text'>Username</span>
