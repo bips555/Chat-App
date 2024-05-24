@@ -1,11 +1,12 @@
 import express from 'express'
-const app = express()
+import { app,server } from './socket/socket.js'
 import dotenv from 'dotenv'
 import authRouter from './routes/auth.routes.js'
 import messageRouter from './routes/message.routes.js'
 import userRouter from './routes/user.routes.js'
 import connectToDB from './db/connectToMongoDB.js'
 import cookieParser from 'cookie-parser'
+
 
 
 dotenv.config()
@@ -20,7 +21,7 @@ app.use('/api/users',userRouter)
 
 app.use('/api/auth',authRouter)
 
-app.listen(5000,()=>{
+server.listen(5000,()=>{
     console.log(`Server is running on port ${PORT}`)
         connectToDB()
     
